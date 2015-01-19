@@ -2,4 +2,5 @@
 
 #Testing git
 
-echo "Testing Git"
+echo "Testing git!!"
+echo "Great!"
