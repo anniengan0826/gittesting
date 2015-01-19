@@ -1,0 +1,29 @@
+{
+  "query":{
+    "filtered":{
+      "filter":{
+        "range":{
+          "Date":{
+            "from":"2015-01-14",
+            "to": "2015-01-15"
+          }
+        }
+      }
+    }
+  },
+  "aggs":{
+    "domain_count":{
+      "terms":{
+        "field": "Domain"
+      },
+      "aggs":{
+        "ip_count":{
+          "cardinality":{
+            "field": "IP"
+          }
+        }
+      }
+    }
+  },
+  "size": 0
+}
